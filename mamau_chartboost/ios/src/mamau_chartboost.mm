@@ -12,11 +12,8 @@ void MamauChartboost::init(String app_id, String app_signature)
 {
     if(!initialized)
     {
-        NSLog(@"Initializing");
         NSString *nsAppId = [NSString stringWithCString:app_id.utf8().get_data() encoding:NSUTF8StringEncoding];
         NSString *nsAppSignature = [NSString stringWithCString:app_signature.utf8().get_data() encoding:NSUTF8StringEncoding];
-        NSLog( @"%@", nsAppId );
-        NSLog( @"%@", nsAppSignature );
         s_pDelegateBridge = [[ChartboostDelegateBridge alloc] init];
         [Chartboost startWithAppId:nsAppId
                     appSignature:nsAppSignature
@@ -29,7 +26,6 @@ void MamauChartboost::cacheInterstitial()
 {
     if(initialized)
     {
-        NSLog(@"Cache interstitial");
         [Chartboost cacheInterstitial:CBLocationDefault];
     }
 };
@@ -39,7 +35,6 @@ bool MamauChartboost::hasInterstitial()
     bool result = false;
     if (initialized)
     {
-        NSLog(@"Has interstitial?");
         result = [Chartboost hasInterstitial:CBLocationDefault];
     }
     return result;
@@ -49,7 +44,6 @@ void MamauChartboost::showInterstitial()
 {
     if(initialized)
     {
-        NSLog(@"Show interstitial");
         [Chartboost showInterstitial:CBLocationDefault];
     }
 };
@@ -68,7 +62,6 @@ bool MamauChartboost::hasMoreApps()
     bool result = false;
     if (initialized)
     {
-        NSLog(@"Has interstitial?");
         result = [Chartboost hasMoreApps:CBLocationDefault];
     }
     return result;
@@ -78,7 +71,6 @@ void MamauChartboost::showMoreApps()
 {
     if(initialized)
     {
-        NSLog(@"Show interstitial");
         [Chartboost showMoreApps:CBLocationDefault];
     }
 };
@@ -87,7 +79,6 @@ void MamauChartboost::cacheRewardVideo()
 {
     if(initialized)
     {
-        NSLog(@"Cache interstitial");
         [Chartboost cacheRewardedVideo:CBLocationDefault];
     }
 };
@@ -97,7 +88,6 @@ bool MamauChartboost::hasRewardVideo()
     bool result = false;
     if (initialized)
     {
-        NSLog(@"Has interstitial?");
         result = [Chartboost hasRewardedVideo:CBLocationDefault];
     }
     return result;
@@ -107,7 +97,6 @@ void MamauChartboost::showRewardVideo()
 {
     if(initialized)
     {
-        NSLog(@"Show interstitial");
         [Chartboost showRewardedVideo:CBLocationDefault];
     }
 };

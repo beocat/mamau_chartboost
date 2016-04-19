@@ -113,7 +113,6 @@ public class MamauChartboost extends Godot.SingletonBase {
 
     public void initOnUiThread(String appID, String appSignature) {
         Chartboost.startWithAppId(activity, appID, appSignature);
-        Chartboost.setLoggingLevel(Level.ALL);
         Chartboost.onCreate(activity);
         Chartboost.onStart(activity);
         initialized = true;
