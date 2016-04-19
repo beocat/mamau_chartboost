@@ -2,7 +2,7 @@
 
 This is an implementation of the Chartboost Api for the Godot Engine (https://github.com/okamstudio/godot)
 
-The module works for both Android and iOS.
+The module works for both Android and iOS and has been tested with Godot 2.0.2. 
 
 Example project can be found in the *mamau_chartboost_example* folder.
 
