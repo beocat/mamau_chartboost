@@ -11,8 +11,12 @@ Example project can be found in the *mamau_chartboost_example* folder.
 2. Download and expand the SDK for the platform you would like to use.
 
 ## Android
-1. Add the file chartboost.jar from the SDK to the *android/lib* folder
-2. Add the module in the engine.cfg
+1. From the Android SDK Manager, make sure you have the following installed:
+  1. Android Support Repository
+  2. Android Suppport Library
+  3. Google Repository
+2. Add the file chartboost.jar from the SDK to the *android/lib* folder
+3. Add the module in the engine.cfg
 ```
 [android]
 modules="org/godotengine/godot/MamauChartboost"
