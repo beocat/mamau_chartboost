@@ -1,0 +1,10 @@
+
+*.d
+
+*.o
+
+*.pyc
+
+*.jar
+
+mamau_chartboost/ios/lib/Chartboost.framework/
