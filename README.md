@@ -2,7 +2,7 @@
 
 This is an implementation of the Chartboost Api for the Godot Engine (https://github.com/okamstudio/godot)
 
-The module works for both Android and iOS and has been tested with Godot 2.0.2. 
+The module works for both Android and iOS and has been tested with Godot 2.0.2.
 
 Example project can be found in the *mamau_chartboost_example* folder.
 
@@ -64,4 +64,9 @@ void show_reward_video()
 void cache_more_apps()
 bool has_more_apps()
 void show_more_apps()
+
+bool get_auto_cache_ads()
+void set_auto_cache_ads(bool auto_cache_ads)
+
+void set_should_request_interstitials_in_first_session(bool should_request)
 ```
