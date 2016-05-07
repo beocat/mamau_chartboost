@@ -86,6 +86,26 @@ public class MamauChartboost extends Godot.SingletonBase {
         }
     }
 
+    public void set_auto_cache_ads(boolean autoCacheAds) {
+        if(initialized) {
+            Chartboost.setAutoCacheAds(autoCacheAds);
+        }
+    }
+
+    public boolean get_auto_cache_ads() {
+        boolean autoCacheAds = false;
+        if(initialized) {
+            autoCacheAds = Chartboost.getAutoCacheAds();
+        }
+        return autoCacheAds;
+    }
+
+    public void set_should_request_interstitials_in_first_session(boolean shouldRequest) {
+        if(initialized) {
+            Chartboost.setShouldRequestInterstitialsInFirstSession(shouldRequest);
+        }
+    }
+
     @Override
     protected void onMainPause() {
         if(initialized) {
@@ -129,7 +149,10 @@ public class MamauChartboost extends Godot.SingletonBase {
                                                     "show_more_apps",
                                                     "cache_reward_video",
                                                     "has_reward_video",
-                                                    "show_reward_video" });
+                                                    "show_reward_video",
+                                                    "get_auto_cache_ads",
+                                                    "set_auto_cache_ads",
+                                                    "set_should_request_interstitials_in_first_session" });
         this.activity = activity;
 	}
 }
