@@ -101,6 +101,32 @@ void MamauChartboost::showRewardVideo()
     }
 };
 
+void MamauChartboost::setAutoCacheAds(bool autoCacheAds)
+{
+    if(initialized)
+    {
+        [Chartboost setAutoCacheAds:autoCacheAds];
+    }
+};
+
+bool MamauChartboost::getAutoCacheAds()
+{
+    bool autoCacheAds = false;
+    if(initialized)
+    {
+        autoCacheAds = [Chartboost getAutoCacheAds];
+    }
+    return autoCacheAds;
+};
+
+void MamauChartboost::setShouldRequestInterstitialsInFirstSession(bool shouldRequest)
+{
+    if(initialized)
+    {
+        [Chartboost setShouldRequestInterstitialsInFirstSession:shouldRequest];
+    }
+};
+
 void MamauChartboost::_bind_methods()
 {
     ObjectTypeDB::bind_method(_MD("init"),                  &MamauChartboost::init);
@@ -113,6 +139,9 @@ void MamauChartboost::_bind_methods()
     ObjectTypeDB::bind_method(_MD("cache_reward_video"),    &MamauChartboost::cacheRewardVideo);
     ObjectTypeDB::bind_method(_MD("has_reward_video"),      &MamauChartboost::hasRewardVideo);
     ObjectTypeDB::bind_method(_MD("show_reward_video"),     &MamauChartboost::showRewardVideo);
+    ObjectTypeDB::bind_method(_MD("get_auto_cache_ads"),    &MamauChartboost::getAutoCacheAds);
+    ObjectTypeDB::bind_method(_MD("set_auto_cache_ads"),    &MamauChartboost::setAutoCacheAds);
+    ObjectTypeDB::bind_method(_MD("set_should_request_interstitials_in_first_session"),     &MamauChartboost::setShouldRequestInterstitialsInFirstSession);
 };
 
 MamauChartboost::MamauChartboost()

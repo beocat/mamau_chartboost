@@ -23,6 +23,9 @@ public:
     void cacheRewardVideo();
     bool hasRewardVideo();
     void showRewardVideo();
+    void setAutoCacheAds(bool autoCacheAds);
+    bool getAutoCacheAds();
+    void setShouldRequestInterstitialsInFirstSession(bool shouldRequest);
 
     MamauChartboost();
     ~MamauChartboost();
