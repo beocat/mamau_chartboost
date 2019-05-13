@@ -1,6 +1,6 @@
 # MamauChartboost
 
-This is an implementation of the Chartboost Api for the Godot Engine (https://github.com/okamstudio/godot)
+This is an implementation of the Chartboost Api for the Godot Engine (https://github.com/godotengine/godot)
 
 The module works for both Android and iOS and has been tested with Godot 2.0.2.
 
